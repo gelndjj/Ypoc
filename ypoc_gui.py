@@ -121,7 +121,7 @@ def move_files():
 
 frame = tk.Frame(window, width=800, height=500, borderwidth=0, highlightthickness=0)
 frame.pack()
-image = Image.open("/Users/jonathanduthil/Documents/GitHub/Ypoc/bg.png")
+image = Image.open("img_soft/bg.png")
 img = ImageTk.PhotoImage(image)
 
 canvas = tk.Canvas(frame, width=800, height=500, highlightthickness=0)
@@ -132,19 +132,19 @@ canvas2 = tk.Canvas(frame, width=700, height=400, highlightthickness=0)
 canvas2.place(x=200,y=100)
 canvas2.create_rectangle(0, 0, 698, 398, outline="black", width=6)
 
-cp_tree_img = ck.CTkImage(light_image=Image.open("/Users/jonathanduthil/Documents/GitHub/Ypoc/cp_tree.png"),
+cp_tree_img = ck.CTkImage(light_image=Image.open("img_soft/cp_tree.png"),
                                   size=(45, 45))
-cp_files_img = ck.CTkImage(light_image=Image.open("/Users/jonathanduthil/Documents/GitHub/Ypoc/cp_files.png"),
+cp_files_img = ck.CTkImage(light_image=Image.open("img_soft/cp_files.png"),
                                   size=(45, 45))
-cp_newer_img = ck.CTkImage(light_image=Image.open("/Users/jonathanduthil/Documents/GitHub/Ypoc/cp_newer.png"),
+cp_newer_img = ck.CTkImage(light_image=Image.open("img_soft/cp_newer.png"),
                                   size=(60, 60))
-cp_gather_img = ck.CTkImage(light_image=Image.open("/Users/jonathanduthil/Documents/GitHub/Ypoc/gather.png"),
+cp_gather_img = ck.CTkImage(light_image=Image.open("img_soft/gather.png"),
                                   size=(45, 45))
-cp_edited_img = ck.CTkImage(light_image=Image.open("/Users/jonathanduthil/Documents/GitHub/Ypoc/edited2.png"),
+cp_edited_img = ck.CTkImage(light_image=Image.open("img_soft/edited.png"),
                                   size=(35, 35))
-cp_del_img = ck.CTkImage(light_image=Image.open("/Users/jonathanduthil/Documents/GitHub/Ypoc/del.png"),
+cp_del_img = ck.CTkImage(light_image=Image.open("img_soft/del.png"),
                                   size=(35,35))
-cp_mv_img = ck.CTkImage(light_image=Image.open("/Users/jonathanduthil/Documents/GitHub/Ypoc/mv.png"),
+cp_mv_img = ck.CTkImage(light_image=Image.open("img_soft/mv.png"),
                                   size=(35,35))
 
 btn_cp_tree = ck.CTkButton(canvas2, text='Copy Structure', width=400, height=200, fg_color='white', hover_color='#9adffc', text_color='black', border_width=2, border_color='#d7dee0', image=cp_tree_img, compound=TOP, command=cp_tree)
