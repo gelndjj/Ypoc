@@ -157,7 +157,7 @@ btn_gather = ck.CTkButton(canvas2, text='Create\n Paths List', width=100, height
 btn_gather.place(x=10, y=230)
 btn_edited = ck.CTkButton(canvas2, text='Copy Only\n Edited Files', width=150, height=150, fg_color='white', hover_color='#9adffc', text_color='black', image=cp_edited_img, border_width=2, border_color='#d7dee0',compound=TOP, command=edited_files)
 btn_edited.place(x=260, y=230)
-btn_del = ck.CTkButton(canvas2, text='Wipe Out\n Destination', width=100, height=75, fg_color='white', hover_color='#9adffc', text_color='black',image=cp_del_img, border_width=2, border_color='#d7dee0', command=edited_files)
+btn_del = ck.CTkButton(canvas2, text='Wipe Out\n Destination', width=100, height=75, fg_color='white', hover_color='#9adffc', text_color='black',image=cp_del_img, border_width=2, border_color='#d7dee0', command=delete_files)
 btn_del.place(x=120, y=230)
 btn_mv = ck.CTkButton(canvas2, text='Move\n Files', width=132, height=75, fg_color='white', hover_color='#9adffc', text_color='black',image=cp_mv_img, border_width=2, border_color='#d7dee0', command=move_files)
 btn_mv.place(x=120, y=306)
