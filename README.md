@@ -25,19 +25,19 @@ Ypoc makes copies of your files and directories, copy only newer items, copy onl
 ###### Make a copy of the tree structure, no files will be copied, just directories.
 
 #### Copy Files 
-###### Make a full copy from the source to the destination. Files and directory will be copied.
+###### Make a full copy from source to destination. Files and directory will be copied.
 
 #### Copy Newer Files
 ###### Make a copy of new items and edited files only. Files and directories allready present won't be copied.
 
 #### Copy Only Edited Files
-###### Make a copy of files edited only. New directories or files not edited won't be copied.
+###### Make a copy of edited files only. New directories or files not edited won't be copied.
 
 #### Move Files
 ###### Move all items from source to destination.
 
 #### Wipe Out Destination
-###### Erase all items present in the source selected. A window will be displayed indicating a number of files that are being used during the process if it's the case.
+###### Erase all items present in the selected source. A window will be displayed indicating a number of files that are being used during the process if it's the case.
 
 #### Create Paths List
 ###### Make a txt file containing every paths from the source.
