@@ -1,3 +1,5 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Z8Z6KMSBT)
+
 # YPOC
 _Ypoc is a copy file tool written in Python._
 
@@ -9,7 +11,7 @@ _Ypoc is a copy file tool written in Python._
 
 ```
 ### SUMMARY
-Ypoc makes copies of your files and directories, copy only newer items, copy only edited files, copy tree structure and create a path list.
+Ypoc copies your files and directories, copies only newer items, copies only edited files, copies tree structure and create a path list.
 
 ### SCREENSHOTS
 
@@ -42,13 +44,13 @@ Ypoc makes copies of your files and directories, copy only newer items, copy onl
 #### Create Paths List
 ###### Make a txt file containing every paths from the source.
 
+#### _Percent Copy Progress_
+###### While copying or moving data, a red label displays the copy progress. Pressing "a" abort the copy.
+
+![Screenshot](https://github.com/gelndjj/Ycop/blob/main/img/copy_progress.png)
+
+![Screenshot](https://github.com/gelndjj/Ycop/blob/main/img/copy_abort.png)
 
 ### REQUIREMENTS INSTALLATION
 
 > pending
-
-
-
-```
-FEATURES TO COME -> INCLUDE PROGRESS BAR
-```
