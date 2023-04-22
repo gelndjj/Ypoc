@@ -15,25 +15,21 @@ y = (screen_height/4) - (height/4)
 window.geometry("%dx%d+%d+%d" % (width, height, x, y))
 window.resizable(0, 0)
 
-
-def cp_tree():# DONE
+def cp_tree():
     src_folder = filedialog.askdirectory(title="Select Source Folder")
 
     if src_folder:
         dst_folder = filedialog.askdirectory(title="Select Destination Folder")
 
         if dst_folder:
-            # Count the total number of directories that need to be created
             total_dirs = sum([len(dirs) for _, dirs, _ in os.walk(src_folder)])
             created_dirs = 0
 
-            # create a flag to stop the copy process
             stop_flag = False
             def stop_copy():
                 nonlocal stop_flag
                 stop_flag = True
 
-            # bind the 'A' key to the stop_copy() function
             window.bind('a', lambda event: stop_copy())
 
             for dirpath, dirnames, filenames in os.walk(src_folder):
@@ -44,7 +40,6 @@ def cp_tree():# DONE
                 os.makedirs(new_dir_path, exist_ok=True)
                 created_dirs += 1
 
-                # calculate and update percentage
                 percent = int((created_dirs / total_dirs) * 100)
                 percent_str = f"{percent}%"
                 percent_label.configure(text=percent_str)
@@ -67,13 +62,12 @@ def cp_files():
 
     total_size = sum(os.path.getsize(os.path.join(foldername, filename)) for foldername, subfolders, filenames in os.walk(source) for filename in filenames)
     copied_size = 0
-    stop_flag = False  # create a flag to stop the copy process
+    stop_flag = False
 
     def stop_copy():
         nonlocal stop_flag
         stop_flag = True
 
-    # bind the 'A' key to the stop_copy() function
     window.bind('a', lambda event: stop_copy())
 
     for foldername, subfolders, filenames in os.walk(source):
@@ -81,17 +75,14 @@ def cp_files():
             src_file = os.path.join(foldername, filename)
             dest_file = src_file.replace(source, destination, 1)
 
-            # Create the destination directory if it does not exist
             os.makedirs(os.path.dirname(dest_file), exist_ok=True)
 
-            # Check if the stop flag is set and stop the copy process if it is
             if stop_flag:
                 tk.messagebox.showinfo("Stop", "Copy process was stopped.")
                 percent_label.configure(text="")
                 abort_label.configure(text="")
                 return
 
-            # Copy the file and update the progress label
             shutil.copy2(src_file, dest_file)
             copied_size += os.path.getsize(src_file)
             percent = int(copied_size/total_size * 100)
@@ -106,7 +97,7 @@ def cp_files():
 
     tk.messagebox.showinfo("Copy Complete", "The files have been copied successfully.")
 
-def cp_newer(): #DONE
+def cp_newer():
     source_dir = filedialog.askdirectory(title="Select source directory")
     destination_dir = filedialog.askdirectory(title="Select destination directory")
 
@@ -118,7 +109,6 @@ def cp_newer(): #DONE
         nonlocal stop_flag
         stop_flag = True
 
-    # bind the 'A' key to the stop_copy() function
     window.bind('a', lambda event: stop_copy())
 
     for root_dir, _, files in os.walk(source_dir):
@@ -129,7 +119,6 @@ def cp_newer(): #DONE
                 break
             src_file = os.path.join(root_dir, file)
             dest_file = os.path.join(dest_dir, file)
-            # Copy the file if it is newer
             if os.path.exists(dest_file):
                 if os.path.getmtime(src_file) > os.path.getmtime(dest_file):
                     shutil.copy2(src_file, dest_file)
@@ -144,7 +133,6 @@ def cp_newer(): #DONE
             abort_str = 'Press \'a\' to abort'
             abort_label.configure(text=abort_str)
 
-            # check stop_flag and break out of loop if True
             if stop_flag:
                 break
 
@@ -156,55 +144,48 @@ def cp_newer(): #DONE
     else:
         tk.messagebox.showinfo("Success", "Newer items copied successfully!")
 
-def gather(): #DONE
+def gather():
     folder_path = filedialog.askdirectory()
     file_paths = []
 
     total_files = 0
     copied_files = 0
 
-    # Count the total number of files to copy
     for root, dirs, files in os.walk(folder_path):
         total_files += len(files)
 
-    # create a flag to stop the copy process
     stop_flag = False
     def stop_copy():
         nonlocal stop_flag
         stop_flag = True
 
-    # bind the 'A' key to the stop_copy() function
     window.bind('a', lambda event: stop_copy())
 
     for root, dirs, files in os.walk(folder_path):
         for file in files:
-            if stop_flag: # check if stop flag is set
-                break # stop copying files
+            if stop_flag:
+                break
             file_paths.append(os.path.join(root, file))
 
             copied_files += 1
             progress_text = "{}/{}".format(copied_files, total_files)
-            # Update the label with the progress text
             percent_label.configure(text=progress_text)
-            # Update the label immediately
             percent_label.update()
             abort_str = 'Press \'a\' to abort'
             abort_label.configure(text=abort_str)
 
-        if stop_flag: # check if stop flag is set
-            break # stop copying files
+        if stop_flag:
+            break
 
     with open('list_files.txt', 'w') as f:
         for item in file_paths:
-            if stop_flag: # check if stop flag is set
-                break # stop writing file paths
+            if stop_flag:
+                break
             f.write('%s\n' % item)
 
             copied_files += 1
             progress_text = "{}/{}".format(copied_files, total_files)
-            # Update the label with the progress text
             percent_label.configure(text=progress_text)
-            # Update the label immediately
             percent_label.update()
 
             abort_str = 'Press \'a\' to abort'
@@ -218,7 +199,7 @@ def gather(): #DONE
     else:
         tk.messagebox.showinfo("Success", "Paths list copied successfully!")
 
-def edited_files(): #DONE
+def edited_files():
     source_dir = filedialog.askdirectory(title="Select source directory")
     destination_dir = filedialog.askdirectory(title="Select destination directory")
 
@@ -259,7 +240,7 @@ def edited_files(): #DONE
 
     tk.messagebox.showinfo("Success", "Edited files copied successfully!")
 
-def delete_files(): #DONE
+def delete_files():
     folder_path = filedialog.askdirectory(title="Select source directory")
     count = 0
     for filename in os.listdir(folder_path):
@@ -276,7 +257,7 @@ def delete_files(): #DONE
     tk.messagebox.showinfo("Success", f"Files deleted successfully!\n Files left: {count}")
 
 
-def move_files(): #DONE
+def move_files():
     source_dir = filedialog.askdirectory(title="Select source directory")
     destination_dir = filedialog.askdirectory(title="Select destination directory")
 
