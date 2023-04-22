@@ -52,9 +52,11 @@ Ypoc copies your files and directories, copies only newer items, copies only edi
 ![Screenshot](https://github.com/gelndjj/Ycop/blob/main/img/copy_abort_msg.png)
 
 ### REQUIREMENTS INSTALLATION
-
-> pip install -r requirements.txt
-
+```
+pip install -r requirements.txt
+```
 ### CLONE REPO
 
-> git clone https://github.com/gelndjj/Ypoc.git
+```
+git clone https://github.com/gelndjj/Ypoc.git
+```
