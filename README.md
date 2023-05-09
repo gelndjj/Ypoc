@@ -15,7 +15,7 @@ Ypoc copies your files and directories, copies only newer items, copies only edi
 
 ### SCREENSHOTS
 
-![Screenshot](https://github.com/gelndjj/Ycop/blob/main/img/main.png)
+![Screenshot](https://github.com/gelndjj/Ycop/blob/main/img/main_win.png)
 
 ![Screenshot](https://github.com/gelndjj/Ycop/blob/main/img/copying.png)
 
