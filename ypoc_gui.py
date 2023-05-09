@@ -300,7 +300,7 @@ def move_files():
     window.unbind('a')
 
 def open_github_profile():
-    webbrowser.open_new("https://github.com/gelndjj")
+    webbrowser.open_new("https://github.com/gelndjj?tab=repositories")
 
 def kofi():
     webbrowser.open_new("https://ko-fi.com/gelndjj")
