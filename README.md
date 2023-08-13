@@ -55,7 +55,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <div align="center">
-<img src="https://github.com/gelndjj/Ypoc/blob/main/resources/main_windows.png" alt="Logo" width="600" height="600">
+<img src="https://github.com/gelndjj/Ypoc/blob/main/resources/main_windows.png" alt="Logo" width="800" height="600">
 </br>
 </div>
 
