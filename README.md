@@ -57,6 +57,11 @@
 <div align="center">
 <img src="https://github.com/gelndjj/Ypoc/blob/main/resources/main_windows.png" alt="Logo" width="800" height="600">
 </br>
+</br>
+Ypoc project came from the fact I weekly make incremental backup on my personal computers and I was wondering if Python could handle this. 
+</br>
+</br>
+I first wrote a Python script that had only the incremental backup feature (Copy only edited files and Copy newer files). As it worked, I went further with feature like Copy Structure, Compress as ZIP file before copying or Create a files list etc. 
 </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -77,6 +82,12 @@
 ## Usage
 
 </br>
+|	Feature	|	Description	|
+|:---------------:|:---------------:|
+| Row 1, Col 1    | Row 1, Col 2    |
+| Row 2, Col 1    | Row 2, Col 2    |
+| Row 3, Col 1    | Row 3, Col 2    |
+
 </br>
 </br>
 
