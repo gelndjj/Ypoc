@@ -80,16 +80,20 @@ I first wrote a Python script that had only the incremental backup feature (Copy
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
 </br>
+
 |	Feature	|	Description	|
 |:---------------:|:---------------:|
-| Row 1, Col 1    | Row 1, Col 2    |
-| Row 2, Col 1    | Row 2, Col 2    |
-| Row 3, Col 1    | Row 3, Col 2    |
+| Copy Structure    | Only copy folders/sub-folders without files    |
+| Copy Files   | Copy Everything from Source to Destination    |
+| Copy Files as ZIP    | Compress Everything from Source then copy the ZIP file to Destination    |
+| Create Paths List    | List every file paths into a txt file at the root where the script is run   |
+| Wipe Out Destination   | Delete Everything    |
+| Move Files    | Move Everything from Source to Destination   |
+| Copy Only Edited Files    | Copy Files/Folders that has been modifed from the orignal   |
+| Copy Newer Files   | Copy Files/Folders that are not present in Destination      |
+</br>
 
-</br>
-</br>
 
 
 <!-- GETTING STARTED -->
